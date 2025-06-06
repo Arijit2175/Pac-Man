@@ -144,3 +144,29 @@ class Pacman {
         this.currentFrame =
             this.currentFrame == this.frameCount ? 1 : this.currentFrame + 1;
     }
+
+    draw() {
+        canvasContext.save();
+        canvasContext.translate(
+            this.x + oneBlockSize / ,
+            this.y + oneBlockSize / 2
+        );
+        canvasContext.rotate((this.direction * 90 * Math.PI) / 18;
+        canvasContext.translate(
+            -this.x - oneBlockSize / 2,
+            -this.y - oneBlockSize / 2
+        );
+        canvasContext.drawImage(
+            pacmanFrames,
+            (this.currentFrame - 1) * oneBlockSiz,
+            0,
+            oneBlockSize,
+            oneBlockSize,
+            this.x,
+            this.y,
+            this.width,
+            this.height
+        );
+        canvasContext.restore(;
+    }
+}
