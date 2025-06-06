@@ -79,14 +79,19 @@ let gameloop = () => {
     draw();
 };
 
+let gameInterval = setInterval(gameloop, 1000/fps);
+
+let restartPacmanAndGhosts = () => {
+    createNewPacman();
+    createGhosts();
+};
+
 let update = () => {};
 
 let draw = () => {
     createRect(0, 0, canvas.width, canvas.height, "black");
     drawWalls();
 };
-
-let gameInterval = setInterval(gameloop, 1000/fps);
 
 let drawWalls = () => {
     for(let i = 0; i < map.length; i++){
