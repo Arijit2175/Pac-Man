@@ -75,7 +75,7 @@ class Pacman {
     checkCollisions() {
         let isCollided = false;
         if (
-            map[parseInt(this.y / oneBlockSize)]
+            map[parseInt(this.y / oneBlockSize)][
                 parseInt(this.x / oneBlockSize)
             ] == 1 ||
             map[parseInt(this.y / oneBlockSize + 0.9999)][
@@ -84,7 +84,7 @@ class Pacman {
             map[parseInt(this.y / oneBlockSize)][
                 parseInt(this.x / oneBlockSize + 0.9999)
             ] == 1 ||
-            map[parseInt(this.y / oneBlockSize + 0.9999)]
+            map[parseInt(this.y / oneBlockSize + 0.9999)][
                 parseInt(this.x / oneBlockSize + 0.9999)
             ] == 1
         ) {
