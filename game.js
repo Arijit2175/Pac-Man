@@ -189,7 +189,7 @@ let drawWalls = () => {
                         i * oneBlockSize + wallOffset,
                         wallSpaceWidth + wallOffset,
                         wallSpaceWidth,
-                        wallInnerColo
+                        wallInnerColor
                     );
                 }
             if (i > 0 && map[i - 1][j] == 1) {
@@ -199,7 +199,8 @@ let drawWalls = () => {
                         wallSpaceWidth,
                         wallSpaceWidth + wallOffset,
                         wallInnerColor
-                    ),
+                    );
         }
     }
+}
 }
