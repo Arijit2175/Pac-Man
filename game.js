@@ -93,7 +93,14 @@ let onGhostCollision = () => {
     }
 };
 
-let update = () => {};
+let update = () => {
+    pacman.moveProcess();
+    pacman.eat();
+    updateGhosts();
+    if (pacman.checkGhostCollision(ghosts)) {
+        onGhostCollision();
+};
+}
 
 let draw = () => {
     createRect(0, 0, canvas.width, canvas.height, "black");
