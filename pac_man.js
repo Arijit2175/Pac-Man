@@ -139,3 +139,8 @@ class Pacman {
         let mapY = parseInt((this.y * 0.99 + oneBlockSize) / oneBlockSize);
         return mapY;
     }
+
+     changeAnimation() {
+        this.currentFrame =
+            this.currentFrame == this.frameCount ? 1 : this.currentFrame + 1;
+    }
