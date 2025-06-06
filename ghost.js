@@ -184,3 +184,23 @@ class Ghost {
         let queue = [];
         let numOfRows = mp.length;
         let numOfColumns = mp[0].length;
+
+        if (
+            poped.x - 1 >= 0 &&
+            poped.x - 1 < numOfRows &&
+            mp[poped.y][poped.x - 1] != 1
+        ) {
+            let tempMoves = poped.moves.slice();
+            tempMoves.push(DIRECTION_LEFT);
+            queue.push({ x: poped.x - 1, y: poped.y, moves: tempMoves });
+        }
+        if (
+            poped.x + 1 >= 0 &&
+            poped.x + 1 < numOfRows &&
+            mp[poped.y][poped.x + 1] != 1
+        ) {
+            let tempMoves = poped.moves.slice();
+            tempMoves.push(DIRECTION_RIGHT);
+            queue.push({ x: poped.x + 1, y: poped.y, moves: tempMoves });
+        }
+        
