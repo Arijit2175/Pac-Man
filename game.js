@@ -64,6 +64,16 @@ let randomTargetsForGhosts = [
     },
 ];
 
+let createNewPacman = () => {
+    pacman = new Pacman(
+        oneBlockSize,
+        oneBlockSize,
+        oneBlockSize,
+        oneBlockSize,
+        oneBlockSize / 5
+    );
+};
+
 let gameloop = () => {
     update();
     draw();
