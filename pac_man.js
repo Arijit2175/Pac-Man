@@ -13,3 +13,12 @@ class Pacman {
             this.changeAnimation();
         }, 100);
     }
+
+    moveProcess() {
+        this.changeDirectionIfPossible();
+        this.moveForwards();
+        if (this.checkCollisions()) {
+            this.moveBackwards();
+            return;
+        }
+    }
