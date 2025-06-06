@@ -246,6 +246,6 @@ class Ghost {
 
     changeAnimation() {
         this.currentFrame =
-            this.currentFram == this.frameCount  1 : this.currentFrame + 1;
+            this.currentFrame == this.frameCount ? 1 : this.currentFrame + 1;
     }
 
