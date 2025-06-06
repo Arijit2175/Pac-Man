@@ -244,4 +244,8 @@ class Ghost {
         return mapY;
     }
 
-    
+    changeAnimation() {
+        this.currentFrame =
+            this.currentFram == this.frameCount  1 : this.currentFrame + 1;
+    }
+
