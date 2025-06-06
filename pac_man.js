@@ -23,7 +23,7 @@ class Pacman {
         }
     }
 
-     eat() {
+    eat() {
         for (let i = 0; i < map.length; i++) {
             for (let j = 0; j < map[0].length; j++) {
                 if (
@@ -63,7 +63,7 @@ class Pacman {
             case DIRECTION_UP: 
                 this.y -= this.speed;
                 break;
-            case DIRECTION_LEFT:
+            case DIRECTION_LEFT: 
                 this.x -= this.speed;
                 break;
             case DIRECTION_BOTTOM: 
@@ -140,7 +140,7 @@ class Pacman {
         return mapY;
     }
 
-     changeAnimation() {
+    changeAnimation() {
         this.currentFrame =
             this.currentFrame == this.frameCount ? 1 : this.currentFrame + 1;
     }
