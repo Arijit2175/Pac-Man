@@ -149,8 +149,14 @@ let drawScore = () => {
 };
 
 let draw = () => {
+    canvasContext.createRect(0, 0, canvas.width, canvas.height);
     createRect(0, 0, canvas.width, canvas.height, "black");
     drawWalls();
+    drawFoods();
+    drawGhosts();
+    pacman.draw();
+    drawScore();
+    drawRemainingLives();
 };
 
 let drawWalls = () => {
