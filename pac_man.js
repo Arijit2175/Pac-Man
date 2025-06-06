@@ -92,3 +92,16 @@ class Pacman {
         }
         return isCollided;
     }
+
+    checkGhostCollision(ghosts) {
+        for (let i = 0; i < ghosts.length; i++) {
+            let ghost = ghosts[i];
+            if (
+                ghost.getMapX() == this.getMapX() &&
+                ghost.getMapY() == this.getMapY()
+            ) {
+                return true;
+            }
+        }
+        return false;
+    }
