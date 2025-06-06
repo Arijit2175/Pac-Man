@@ -179,3 +179,8 @@ class Ghost {
 
         return 1; 
     }
+
+    addNeighbors(poped, mp) {
+        let queue = [];
+        let numOfRows = mp.length;
+        let numOfColumns = mp[0].length;
