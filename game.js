@@ -126,7 +126,7 @@ let drawRemainingLives = () => {
     for (let i = 0; i < lives; i++) {
         canvasContext.drawImage(
             pacmanFrames,
-            2 * oneBlockSize
+            2 * oneBlockSize,
             0,
             oneBlockSize,
             oneBlockSize,
@@ -134,9 +134,9 @@ let drawRemainingLives = () => {
             oneBlockSize * map.length + 2,
             oneBlockSize,
             oneBlockSize
-        )
+        );
     }
-}
+};
 
 let draw = () => {
     createRect(0, 0, canvas.width, canvas.height, "black");
