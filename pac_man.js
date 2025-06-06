@@ -105,3 +105,16 @@ class Pacman {
         }
         return false;
     }
+
+    changeDirectionIfPossible() {
+        if (this.direction == this.nextDirection) return;
+        let tempDirection = this.direction;
+        this.direction = this.nextDirection;
+        this.moveForwards();
+        if (this.checkCollisions()) {
+            this.moveBackwards();
+            this.direction = tempDirection;
+        } else {
+            this.moveBackwards();
+        }
+    }
