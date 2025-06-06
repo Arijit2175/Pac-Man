@@ -45,6 +45,7 @@ let gameloop = () => {
 let update = () => {};
 
 let draw = () => {
+    createRect(0, 0, canvas.width, canvas.height, "black");
     drawWalls();
 };
 
