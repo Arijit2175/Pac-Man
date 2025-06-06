@@ -42,7 +42,7 @@ class Ghost {
     }
 
     changeRandomDirection() {
-        let additi = 1;
+        let addition = 1;
         this.randomTargetIndex += addition;
-        this.randomTargetIndex = thi.randomTargetIndex % 4;
+        this.randomTargetIndex = this.randomTargetIndex % 4;
     }
