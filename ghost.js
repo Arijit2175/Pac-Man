@@ -46,3 +46,17 @@ class Ghost {
         this.randomTargetIndex += addition;
         this.randomTargetIndex = this.randomTargetIndex % 4;
     }
+
+    moveProcess() {
+        if (this.isInRange()) {
+            this.target = pacman;
+        } else {
+            this.target = randomTargetsForGhosts[this.randomTargetIndex];
+        }
+        this.changeDirectionIfPossible();
+        this.moveForwards();
+        if (this.checkCollisions()) {
+            this.moveBackwards();
+            return;
+        }
+    }
