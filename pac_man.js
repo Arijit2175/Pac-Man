@@ -45,12 +45,12 @@ class Pacman {
                 break;
             case DIRECTION_UP: 
                 this.y += this.speed;
-                break
+                break;
             case DIRECTION_LEFT: 
                 this.x += this.speed;
-                break
+                break;
             case DIRECTION_BOTTOM: 
                 this.y -= this.speed;
-                break
+                break;
         }
     }
