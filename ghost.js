@@ -155,4 +155,27 @@ class Ghost {
         for (let i = 0; i < map.length; i++) {
             mp[i] = map[i].slice();
         }
-        
+        let queue = [
+            {
+                x: this.getMapX(),
+                y: this.getMapY(),
+                rightX: this.getMapXRightSide(),
+                rightY: this.getMapYRightSide(),
+                moves: [],
+            },
+        ];
+        while (queue.length > 0) {
+            let poped = queue.shift();
+            if (poped.x == destX && poped.y == destY) {
+                return poped.moves[0];
+            } else {
+                mp[poped.y][poped.x] = 1;
+                let neighborList = this.addNeighbors(poped, mp);
+                for (let i = 0; i < neighborList.length; i++) {
+                    queue.push(neighborList[i]);
+                }
+            }
+        }
+
+        return 1; 
+    }
