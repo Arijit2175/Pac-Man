@@ -115,3 +115,15 @@ class Ghost {
         }
         return isCollided;
     }
+
+    changeDirectionIfPossible() {
+        let tempDirection = this.direction;
+        this.direction = this.calculateNewDirection(
+            map,
+            parseInt(this.target.x / oneBlockSize),
+            parseInt(this.target.y / oneBlockSize)
+        );
+        if (typeof this.direction == "undefined") {
+            this.direction = tempDirection;
+            return;
+        }
