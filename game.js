@@ -87,11 +87,11 @@ let restartPacmanAndGhosts = () => {
 };
 
 let onGhostCollision = () => {
-    lives-
+    lives--;
     restartPacmanAndGhosts();
     if (lives == 0) {
     }
-}
+};
 
 let update = () => {};
 
