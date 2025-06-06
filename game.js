@@ -8,6 +8,8 @@ let createRect = (x, y, width, height, color) => {
     canvasContext.fillRect(x, y, width, height);
 }
 let fps = 30;
+let oneBlockSize = 20;
+let wallColor = "#342dca";
 
 let map = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -42,6 +44,18 @@ let gameloop = () => {
 
 let update = () => {};
 
-let draw = () => {};
+let draw = () => {
+    drawWalls();
+};
 
 let gameInterval = setInterval(gameloop, 1000/fps);
+
+let drawWalls = () => {
+    for(let i = 0; i < map.length; i++){
+        for(let j = 0; j < map[0].length; j++){
+            if(map[i][j] == 1){
+                createRect(j * oneBlockSize, i * oneBlockSize, oneBlockSize, oneBlockSize, wallColor);
+            }
+        }
+    }
+}
