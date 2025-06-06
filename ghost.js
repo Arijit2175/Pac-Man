@@ -60,3 +60,20 @@ class Ghost {
             return;
         }
     }
+
+    moveBackwards() {
+        switch (this.direction) {
+            case 4:
+                this.x -= this.speed;
+                break;
+            case 3: 
+                this.y += this.speed;
+                break;
+            case 2: 
+                this.x += this.speed;
+                break;
+            case 1: 
+                this.y -= this.speed;
+                break;
+        }
+    }
