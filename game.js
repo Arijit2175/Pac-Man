@@ -163,22 +163,16 @@ let draw = () => {
 };
 
 let drawWalls = () => {
-    for(let i = 0; i < map.length; i++){
-        for(let j = 0; j < map[0].length; j++){
-            if(map[i][j] == 1){
-                createRect(j * oneBlockSize, 
-                    i * oneBlockSize, 
-                    oneBlockSize, 
-                    oneBlockSize, 
-                    wallColor);
-                    if(j < 0 && map[i][j-1] == 1) {
-                        createRect(j * oneBlockSize,
-                            i * oneBlockSize + wallOffset,
-                            wallSpaceWidth + wallOffset,
-                            wallSpaceWidth, 
-                            wallInnerColor
-                        );
-                    }
+    for (let i = 0; i < map.length; i++) {
+        for (let j = 0; j < map[0].length; j++) {
+            if (map[i][j] == 1) {
+                createRect(
+                    j * oneBlockSize,
+                    i * oneBlockSize,
+                    oneBlockSize,
+                    oneBlockSize,
+                    "#342DCA"
+                );
             }
         }
     }
