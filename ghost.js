@@ -40,3 +40,9 @@ class Ghost {
         }
         return false;
     }
+
+    changeRandomDirection() {
+        let additi = 1;
+        this.randomTargetIndex += addition;
+        this.randomTargetIndex = thi.randomTargetIndex % 4;
+    }
