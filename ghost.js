@@ -127,3 +127,25 @@ class Ghost {
             this.direction = tempDirection;
             return;
         }
+         if (
+            this.getMapY() != this.getMapYRightSide() &&
+            (this.direction == DIRECTION_LEFT ||
+                this.direction == DIRECTION_RIGHT)
+        ) {
+            this.direction = DIRECTION_UP;
+        }
+        if (
+            this.getMapX() != this.getMapXRightSide() &&
+            this.direction == DIRECTION_UP
+        ) {
+            this.direction = DIRECTION_LEFT;
+        }
+        this.moveForwards();
+        if (this.checkCollisions()) {
+            this.moveBackwards();
+            this.direction = tempDirection;
+        } else {
+            this.moveBackwards();
+        }
+        console.log(this.direction);
+    }
