@@ -22,7 +22,10 @@ let ghostImageLocations = [
 ];
 
 let fps = 30;
+let pacman;
 let oneBlockSize = 20;
+let score = 0;
+let ghosts = [];
 let wallColor = "#342dca";
 let wallSpaceWidth = oneBlockSize / 1.1;
 let wallOffset = (oneBlockSize - wallSpaceWidth) / 2;
