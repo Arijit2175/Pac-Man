@@ -19,7 +19,7 @@ class Ghost {
         this.direction = DIRECTION_RIGHT;
         this.imageX = imageX;
         this.imageY = imageY;
-        this.imageHeight = imageHeigth;
+        this.imageHeight = imageHeight;
         this.imageWidth = imageWidth;
         this.range = range;
         this.randomTargetIndex = parseInt(Math.random() * 4);
@@ -63,7 +63,7 @@ class Ghost {
 
     moveBackwards() {
         switch (this.direction) {
-            case 4:
+            case 4: 
                 this.x -= this.speed;
                 break;
             case 3: 
@@ -78,7 +78,7 @@ class Ghost {
         }
     }
 
-     moveForwards() {
+    moveForwards() {
         switch (this.direction) {
             case 4: 
                 this.x += this.speed;
@@ -89,7 +89,7 @@ class Ghost {
             case 2: 
                 this.x -= this.speed;
                 break;
-            case 1: 
+            case 1:
                 this.y += this.speed;
                 break;
         }
@@ -127,7 +127,7 @@ class Ghost {
             this.direction = tempDirection;
             return;
         }
-         if (
+        if (
             this.getMapY() != this.getMapYRightSide() &&
             (this.direction == DIRECTION_LEFT ||
                 this.direction == DIRECTION_RIGHT)
@@ -155,6 +155,7 @@ class Ghost {
         for (let i = 0; i < map.length; i++) {
             mp[i] = map[i].slice();
         }
+
         let queue = [
             {
                 x: this.getMapX(),
@@ -224,7 +225,7 @@ class Ghost {
         return queue;
     }
 
-     getMapX() {
+    getMapX() {
         let mapX = parseInt(this.x / oneBlockSize);
         return mapX;
     }
